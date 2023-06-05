@@ -26,7 +26,7 @@ app.get("/read", (req, res) => {
 })
 
 const urlDB = process.env.taskDB;
-console.log(urlDB);
+
 mongoose.connect(urlDB, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.connection.on('connected', () => {
     console.log('Connected to DB');
