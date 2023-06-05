@@ -13,9 +13,9 @@ const createControl = {
                 date: date
             })
             await task.save();
-            res.json({"Created Task": "Yes"});
+            res.redirect('https://task-manager-6eqb.onrender.com');
         }catch(err){
-            return res.status(200).json({message: err.message});
+            res.redirect('https://task-manager-6eqb.onrender.com/read');
         }
     }
 }
