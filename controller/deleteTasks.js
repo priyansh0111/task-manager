@@ -6,9 +6,9 @@ const deleteControl = {
             const _id = req.body._id;
             console.log(_id);
             await Task.deleteOne({_id: _id});
-            res.redirect('https://task-manager-6eqb.onrender.com/read');
+            res.redirect('https://task-manager-6eqb.onrender.com/read')
         }catch(err){
-            res.redirect('https://task-manager-6eqb.onrender.com/read');
+            return res.status(200).json({message: err.message});
         }
     }
 }

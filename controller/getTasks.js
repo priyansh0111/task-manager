@@ -4,9 +4,9 @@ const taskControl = {
     getTasks: async (req, res) => {
         try{
             const tasks = await Task.find({});
-            res.redirect('https://task-manager-6eqb.onrender.com/read');
+            res.send(tasks);
         }catch(err){
-            res.redirect('https://task-manager-6eqb.onrender.com/read');
+            return res.status(200).json({message: err.message});
         }
     }
 }
