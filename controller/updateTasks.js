@@ -25,7 +25,7 @@ const updateControl = {
                 date: date,
             }
             await Task.findOneAndUpdate({_id: _id}, update);
-            res.json("update done");
+            res.redirect('https://task-manager-6eqb.onrender.com/read');
         }catch(err){
             return res.status(200).json({message: err.message});
         }
