@@ -24,6 +24,9 @@ app.get("/", (req, res) => {
 app.get("/read", (req, res) => {
     res.sendFile(__dirname + "/public/index.html")
 })
+app.get("/update/*", (req, res) => {
+    res.sendFile(__dirname + '/public/index.html')
+})
 
 const urlDB = process.env.taskDB;
 
